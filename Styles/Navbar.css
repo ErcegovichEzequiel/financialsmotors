@@ -1,0 +1,31 @@
+.navContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.navContainer .navImg {
+    width: 5%;
+}
+
+.navContainer .navImg .img {
+    width: 100%;
+}
+
+.navContainer .navLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 95%;
+    font-size: 120%;
+    padding: 2%
+}
+
+.navContainer .navLinks .active {
+    color: black;
+    text-decoration: none;
+    font-size: 120%;
+}
+
+.navContainer .navLinks .active:hover {
+    color: rgb(255, 209, 4);
+}

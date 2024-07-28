@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.pantallaContainer{
+    background-color: rgb(17 24 39);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pantallaContainer .mejorVendedorContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+    padding: 2%;
+}
+
+.pantallaContainer .mejorVendedorContainer .vendedoresCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    color: white;
+    padding: 2%;
+    border: solid 1px white;
+    box-shadow: 0 0 10px gold, inset 0 0 10px gold;
+}
+
+.pantallaContainer .mejorVendedorContainer .vendedoresCard .mejorVendedorImg{
+    width: 100%;
+}
+
+.pantallaContainer .vendedoresCardsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+    padding: 2%;
+}
+
+.pantallaContainer .vendedoresCardsContainer .vendedoresCardTodos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    color: white;
+    padding: 2%;
+    border: solid 1px white;
+    box-shadow: 0 0 10px white;
+}
+
+.pantallaContainer .vendedoresCardsContainer .vendedoresCardTodos .vendedorImg{
+    width: 100%;
+}
