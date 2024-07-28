@@ -31,9 +31,9 @@ const Pantalla = () => {
             <Navbar />
             <div className='pantallaContainer'>
                 <div className='mejorVendedorContainer'>
+                    <img src="./img/Corona.png" alt="Corona" className='corona' />
                     {mejorVendedor ? (
                         <div className='vendedoresCard' key={mejorVendedor.id}>
-                            <h2>MEJOR VENDEDOR</h2>
                             <h3>{mejorVendedor.Nombre} {mejorVendedor.Apellido}</h3>
                             <img className='mejorVendedorImg' src={mejorVendedor.Foto} alt="" />
                             <p>{mejorVendedor.Ventas}</p>
