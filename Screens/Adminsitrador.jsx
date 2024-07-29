@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../Components/Navbar';
 import { collection, getDocs, updateDoc, addDoc, deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../src/Fetching/firebase-config'
+import '../Styles/Administrador.css'
+import Footer from '../Components/Footer';
 
 const Administrador = () => {
     const [vendedores, setVendedores] = useState([]);
@@ -82,34 +84,35 @@ const Administrador = () => {
         <>
             <Navbar />
             <div className='pantallaContainer'>
-                <div>
+                <div className='mejorVendedorContainer'>
+                <img src="./img/Corona.png" alt="Corona" className='corona' />
                     {mejorVendedor ? (
-                        <div className='vendedoresCard' key={mejorVendedor.id}>
+                        <div className='mejorVendedor' key={mejorVendedor.id}>
                             <h3>{mejorVendedor.Nombre} {mejorVendedor.Apellido}</h3>
-                            <img src={mejorVendedor.Foto} alt="" />
+                            <img className='mejorVendedorImg' src={mejorVendedor.Foto} alt="Mejor Vendedor" />
                             <p>{mejorVendedor.Ventas}</p>
                         </div>
                     ) : (
                         "Cargando el mejor vendedor..."
                     )}
                 </div>
-                <div className='vendedoresCards'>
+                <div className='vendedoresCardsContainer'>
                     {
                         vendedores.map((vendedor) => (
-                            <div className='vendedoresCard' key={vendedor.id}>
-                                <h3>{vendedor.Nombre} {vendedor.Apellido}</h3>
-                                <p>ID del Vendedor: {vendedor.id}</p>
-                                <img src={vendedor.Foto} alt="" />
+                            <div className='vendedoresCardTodos' key={vendedor.id}>
+                                <h3 className='vendedorName'>{vendedor.Nombre} {vendedor.Apellido}</h3>
+                                <p className='vendedorID'>ID del Vendedor: {vendedor.id}</p>
+                                <img className='vendedorImg' src={vendedor.Foto} alt="Vendedor" />
                                 <p>{vendedor.Ventas}</p>
-                                <button onClick={() => handleDecrement(vendedor.id, vendedor.Ventas)}>-</button>
-                                <button onClick={() => handleIncrement(vendedor.id, vendedor.Ventas)}>+</button>
+                                <button className='vendedorButton' onClick={() => handleDecrement(vendedor.id, vendedor.Ventas)}>-</button>
+                                <button className='vendedorButton' onClick={() => handleIncrement(vendedor.id, vendedor.Ventas)}>+</button>
                             </div>
                         ))
                     }
                 </div>
                 <div className='controlButtons'>
-                    <button onClick={() => setShowAddForm(!showAddForm)}>Agregar Vendedor</button>
-                    <button onClick={() => setShowDeleteForm(!showDeleteForm)}>Eliminar Vendedor</button>
+                    <button className='buttonsTools' onClick={() => setShowAddForm(!showAddForm)}>Agregar Vendedor</button>
+                    <button className='buttonsTools' onClick={() => setShowDeleteForm(!showDeleteForm)}>Eliminar Vendedor</button>
                 </div>
                 {showAddForm && (
                     <div className='addVendedorForm'>
@@ -154,6 +157,7 @@ const Administrador = () => {
                     </div>
                 )}
             </div>
+            <Footer />
         </>
     );
 }

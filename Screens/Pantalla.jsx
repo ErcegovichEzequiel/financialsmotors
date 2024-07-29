@@ -45,7 +45,7 @@ const Pantalla = () => {
                         vendedores.map((vendedor) => {
                             return (
                                 <div className='vendedoresCardTodos' key={vendedor.id}>
-                                    <h3>{vendedor.Nombre} {vendedor.Apellido}</h3>
+                                    <h3 className='vendedorName'>{vendedor.Nombre} {vendedor.Apellido}</h3>
                                     <img className='vendedorImg' src={vendedor.Foto} alt="" />
                                     <p>{vendedor.Ventas}</p>
                                 </div>
