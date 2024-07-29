@@ -83,7 +83,7 @@ const Administrador = () => {
     return (
         <>
             <Navbar />
-            <div className='pantallaContainer'>
+            <div className='adminsitradorContainer'>
                 <div className='mejorVendedorContainer'>
                 <img src="./img/Corona.png" alt="Corona" className='corona' />
                     {mejorVendedor ? (
