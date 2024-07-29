@@ -21,7 +21,6 @@
     font-size: 120%;
     padding: 2%;
     font-family: "Lexend", sans-serif;
-    color: white;
 }
 
 .navContainer .navLinks .active {
@@ -29,6 +28,7 @@
     text-decoration: none;
     font-size: 120%;
     font-family: "Lexend", sans-serif;
+    color: white;
 }
 
 .navContainer .navLinks .active:hover {
