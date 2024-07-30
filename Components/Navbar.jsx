@@ -7,6 +7,7 @@ const Navbar = () => {
         <div className='navContainer'>
             <div className='navImg'>
                 <img src="/img/fnlogo.png" alt="Logo" className='img' />
+                <img src="/img/auto.png" alt="Auto" className='imgAuto' />
             </div>
             <div className='navLinks'>
                 <Link to='/' className='active'>Pantalla</Link>
